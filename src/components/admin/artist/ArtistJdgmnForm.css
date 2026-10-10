@@ -1,0 +1,451 @@
+.artist-review-page {
+  min-height: 100vh;
+  background: #fff;
+  color: #111;
+}
+
+/* header */
+
+.admin-header {
+  min-height: 72px;
+  border-bottom: 1px solid #e4e7ec;
+  background: #fff;
+}
+
+.header-icon-button {
+  padding: 0 !important;
+  color: #29436d !important;
+}
+
+.notification-area {
+  position: relative;
+  color: #29436d;
+}
+
+.notification-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 19px;
+  height: 19px;
+
+  border-radius: 50%;
+
+  background: #f11b2c;
+  color: #fff;
+
+  font-size: 11px;
+}
+
+.admin-user {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.admin-avatar {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #e4e7ed;
+  color: #fff;
+}
+
+/* main */
+
+.review-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px 24px 60px;
+}
+
+.page-title {
+  margin-bottom: 28px;
+
+  font-size: 32px;
+  font-weight: 800;
+}
+
+/* tabs */
+
+.review-tabs {
+  display: flex;
+  flex-wrap: nowrap;
+
+  margin-bottom: 24px;
+
+  border-bottom: 1px solid #e1e3e8;
+
+  overflow-x: auto;
+}
+
+.review-tabs .nav-item {
+  flex: 1;
+  min-width: max-content;
+}
+
+.review-tabs .nav-link {
+  position: relative;
+
+  padding: 14px 18px 18px;
+
+  border: none;
+
+  color: #111;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  text-align: center;
+
+  white-space: nowrap;
+}
+
+.review-tabs .nav-link.active {
+  color: #4b20e9;
+  background: transparent;
+}
+
+.review-tabs .nav-link.active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: -1px;
+
+  height: 3px;
+
+  background: #4b20e9;
+}
+
+/* search */
+
+.search-section {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  margin-bottom: 28px;
+}
+
+.search-section .input-group {
+  height: 55px;
+}
+
+.search-section .input-group-text {
+  border-right: none;
+
+  background: #fff;
+  color: #60708c;
+}
+
+.search-section .form-control {
+  border-left: none;
+
+  box-shadow: none;
+}
+
+.search-button {
+  height: 52px;
+
+  border: none !important;
+
+  background: linear-gradient(
+    90deg,
+    #4314ec,
+    #3215df
+  ) !important;
+
+  font-size: 16px;
+}
+
+.reset-button {
+  height: 52px;
+
+  border-color: #5335e6 !important;
+
+  color: #4327d9 !important;
+
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* card */
+
+.review-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.review-card {
+  border: 1px solid #e5e7eb !important;
+
+  border-radius: 10px !important;
+}
+
+.review-card .card-body {
+  padding: 22px;
+}
+
+.apply-date {
+  display: flex;
+  gap: 20px;
+
+  margin-bottom: 18px;
+
+  color: #395378;
+
+  font-size: 14px;
+}
+
+.applicant-area {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.profile-image {
+  width: 72px;
+  height: 72px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+}
+
+.applicant-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.applicant-name {
+  margin-bottom: 5px;
+
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.applicant-email {
+  color: #536d96;
+
+  font-size: 13px;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.artwork-image {
+  width: 100px;
+  height: 90px;
+
+  flex-shrink: 0;
+
+  border-radius: 8px;
+
+  object-fit: cover;
+}
+
+/* result */
+
+.review-result-area {
+  padding-left: 10px;
+}
+
+.status-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  margin-bottom: 12px;
+
+  color: #3f567a;
+
+  font-size: 14px;
+}
+
+.result-label {
+  margin-bottom: 4px;
+
+  color: #3f567a;
+
+  font-size: 14px;
+}
+
+.result-title {
+  margin-bottom: 4px;
+
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.result-description {
+  margin-bottom: 15px;
+
+  color: #4c648b;
+
+  font-size: 14px;
+}
+
+/* badge */
+
+.status-approved {
+  background: #dff7e5 !important;
+  color: #18a143 !important;
+}
+
+.status-waiting {
+  background: #fff0dd !important;
+  color: #ef8e1c !important;
+}
+
+.status-review {
+  background: #ece9ff !important;
+  color: #4b32df !important;
+}
+
+.status-modify {
+  background: #fff0dd !important;
+  color: #f07812 !important;
+}
+
+.status-rejected {
+  background: #ffe4e7 !important;
+  color: #e92d40 !important;
+}
+
+.status-approved,
+.status-waiting,
+.status-review,
+.status-modify,
+.status-rejected {
+  padding: 7px 10px;
+
+  border-radius: 6px;
+
+  font-size: 13px;
+}
+
+/* detail */
+
+.detail-button {
+  width: 100%;
+  height: 44px;
+
+  border-color: #d7dce4 !important;
+
+  background: #fff !important;
+  color: #111 !important;
+
+  font-weight: 700;
+}
+
+.empty-result {
+  padding: 60px 20px;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+
+  color: #777;
+  background-color: #fff;
+
+  text-align: center;
+  font-size: 15px;
+}
+
+.status-default {
+  padding: 7px 10px;
+
+  border-radius: 6px;
+
+  background-color: #e9ecef !important;
+  color: #495057 !important;
+
+  font-size: 13px;
+}
+
+.scroll-observer {
+  min-height: 50px;
+}
+
+.more-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 25px 0;
+
+  color: #666;
+
+  font-size: 14px;
+}
+
+.end-message {
+  padding: 25px 0;
+
+  color: #999;
+
+  text-align: center;
+
+  font-size: 13px;
+}
+
+/* mobile */
+
+@media (max-width: 767px) {
+  .review-container {
+    padding: 24px 16px 50px;
+  }
+
+  .page-title {
+    font-size: 28px;
+  }
+
+  .review-tabs .nav-item {
+    flex: 0 0 auto;
+  }
+
+  .review-tabs .nav-link {
+    padding-left: 15px;
+    padding-right: 15px;
+
+    font-size: 14px;
+  }
+
+  .review-card .card-body {
+    padding: 18px;
+  }
+
+  .review-result-area {
+    padding-left: 0;
+  }
+
+  .profile-image {
+    width: 62px;
+    height: 62px;
+  }
+
+  .artwork-image {
+    width: 90px;
+    height: 82px;
+  }
+}

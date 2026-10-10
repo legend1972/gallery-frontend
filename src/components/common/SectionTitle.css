@@ -1,0 +1,17 @@
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.section-title i {
+  color: #2f20dd;
+  font-size: 25px;
+}
+
+.section-title strong {
+  font-size: 18px;
+  font-weight: 700;
+}

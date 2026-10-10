@@ -1,0 +1,748 @@
+/* ==========================================
+   알림 설정 Modal
+========================================== */
+
+.ntcn-setting-modal {
+    /* z-index: 1070; */
+    max-width: 760px;
+    width: calc(100% - 30px);
+}
+
+.ntcn-setting-modal-content {
+    border: 0;
+    border-radius: 26px;
+    overflow: hidden;
+
+    box-shadow:
+        0 20px 60px
+        rgba(0, 0, 0, 0.18);
+}
+
+/* .ntcn-setting-modal .modal-dialog {
+    margin: 0;
+}
+
+.ntcn-setting-modal .modal-content {
+    border: 0;
+    border-radius: 0;
+    background: #ffffff;
+}
+
+.ntcn-setting-modal .modal-body {
+    padding: 0;
+    overflow-y: auto;
+    background: #ffffff;
+} */
+
+.ntcn-setting-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: 78px;
+
+    padding:
+        18px
+        26px
+        10px;
+
+    border-bottom: 0;
+}
+
+.ntcn-setting-left {
+    display: flex;
+    align-items: center;
+}
+
+/* ==========================================
+   전체 영역
+========================================== */
+
+.ntcn-setting-container {
+    display: flex;
+    align-items: center;
+}
+
+
+/* ==========================================
+   Header
+========================================== */
+
+/* .ntcn-setting-header {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 18px;
+}
+
+
+.ntcn-setting-header h2 {
+    margin: 0;
+
+    font-size: 30px;
+    font-weight: 700;
+
+    color: #111111;
+} */
+
+
+/* 뒤로가기 */
+
+.ntcn-setting-back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+    margin-right: 14px;
+
+    color: #111;
+
+    font-size: 30px;
+
+    text-decoration: none;
+}
+
+
+/* .ntcn-setting-back svg {
+    font-size: 31px;
+} */
+
+
+.notification-back:hover,
+.notification-back:focus {
+    color: #111;
+}
+
+.ntcn-setting-title {
+    font-size: 28px;
+    font-weight: 700;
+}
+/* 설명 */
+
+.ntcn-setting-description {
+    margin-bottom: 22px;
+
+    font-size: 16px;
+
+    color: #475569;
+}
+
+
+/* ==========================================
+   Card
+========================================== */
+
+.ntcn-setting-card {
+    margin-bottom: 23px;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 17px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.025);
+
+    overflow: hidden;
+}
+
+
+.ntcn-setting-card .card-body {
+    padding: 23px 28px;
+}
+
+
+/* 카드 헤더 */
+
+.ntcn-setting-card-header {
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+.ntcn-setting-card-header h5 {
+    margin: 0 0 7px 0;
+
+    font-size: 21px;
+    font-weight: 700;
+
+    color: #111111;
+}
+
+
+.ntcn-setting-card-header p {
+    margin: 0;
+
+    font-size: 14px;
+
+    color: #64748b;
+}
+
+
+/* ==========================================
+   Switch
+========================================== */
+
+.ntcn-setting-switch-area {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    white-space: nowrap;
+
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+.ntcn-setting-modal .form-switch .form-check-input {
+    width: 3.2em;
+    height: 1.7em;
+
+    cursor: pointer;
+}
+
+
+.ntcn-setting-modal .form-check-input:checked {
+    background-color: #5424cf;
+    border-color: #5424cf;
+}
+
+
+.ntcn-setting-modal .form-check-input:disabled {
+    cursor: default;
+}
+
+
+/* ==========================================
+   전체 알림 방식
+========================================== */
+
+.ntcn-setting-method-area {
+    margin-top: 24px;
+}
+
+
+.ntcn-setting-method {
+    min-height: 115px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+}
+
+
+.ntcn-setting-method strong {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+.ntcn-setting-method-icon {
+    font-size: 29px;
+
+    color: #07143a;
+}
+
+
+.ntcn-setting-method.method-border {
+    border-left: 1px solid #dce1e8;
+}
+
+
+/* ==========================================
+   항목별 설정
+========================================== */
+
+.ntcn-setting-section-title {
+    margin: 23px 0 14px;
+
+    font-size: 22px;
+    font-weight: 700;
+}
+
+
+.ntcn-setting-item-card {
+    overflow: hidden;
+}
+
+
+/* Header / Row */
+
+.ntcn-setting-table-header,
+.ntcn-setting-row {
+    display: grid;
+
+    grid-template-columns:
+        minmax(380px, 2fr)
+        140px
+        140px
+        140px;
+
+    align-items: center;
+}
+
+
+.ntcn-setting-table-header {
+    min-height: 62px;
+
+    padding: 0 24px;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    text-align: center;
+}
+
+
+.ntcn-setting-table-header
+.ntcn-setting-info-col {
+    text-align: left;
+}
+
+
+.ntcn-setting-row {
+    min-height: 82px;
+
+    padding: 10px 24px;
+
+    border-bottom: 1px solid #edf0f4;
+}
+
+
+.ntcn-setting-row:last-child {
+    border-bottom: 0;
+}
+
+
+.ntcn-setting-row > div:not(:first-child) {
+    display: flex;
+
+    justify-content: center;
+}
+
+
+/* ==========================================
+   알림 정보
+========================================== */
+
+.ntcn-setting-info-col {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.ntcn-setting-text {
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+
+.ntcn-setting-text strong {
+    font-size: 16px;
+    font-weight: 600;
+
+    color: #151515;
+}
+
+
+.ntcn-setting-text span {
+    font-size: 13px;
+
+    color: #64748b;
+}
+
+
+/* ==========================================
+   알림 아이콘
+========================================== */
+
+.ntcn-setting-icon {
+    width: 52px;
+    height: 52px;
+
+    min-width: 52px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 24px;
+}
+
+
+.ntcn-setting-icon.icon-red {
+    color: #ff253f;
+    background: #ffe9ed;
+}
+
+
+.ntcn-setting-icon.icon-blue {
+    color: #1686e5;
+    background: #e6f3ff;
+}
+
+
+.ntcn-setting-icon.icon-orange {
+    color: #ff8500;
+    background: #fff0df;
+}
+
+
+.ntcn-setting-icon.icon-purple {
+    color: #5822cf;
+    background: #eee7ff;
+}
+
+
+.ntcn-setting-icon.icon-green {
+    color: #10b981;
+    background: #dff8ef;
+}
+
+
+.ntcn-setting-icon.icon-yellow {
+    color: #ef9e00;
+    background: #fff3dc;
+}
+
+
+.ntcn-setting-icon.icon-violet {
+    color: #5822cf;
+    background: #eee7ff;
+}
+
+
+.ntcn-setting-icon.icon-mint {
+    color: #10b981;
+    background: #dff8ef;
+}
+
+
+.ntcn-setting-icon.icon-gray {
+    color: #64748b;
+    background: #f1f5f9;
+}
+
+
+/* ==========================================
+   Checkbox
+========================================== */
+
+.ntcn-setting-row .form-check {
+    margin: 0;
+}
+
+
+.ntcn-setting-row .form-check-input {
+    width: 21px;
+    height: 21px;
+
+    margin: 0;
+
+    cursor: pointer;
+}
+
+
+/* ==========================================
+   시간 설정
+========================================== */
+
+.ntcn-setting-time-row {
+    margin-top: 24px;
+
+    align-items: center;
+}
+
+
+.ntcn-setting-time-area {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+}
+
+
+.ntcn-setting-time-area label {
+    min-width: 68px;
+
+    margin: 0;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+.ntcn-setting-time-input {
+    position: relative;
+
+    flex: 1;
+}
+
+
+.ntcn-setting-time-input > svg {
+    position: absolute;
+
+    left: 17px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    z-index: 2;
+
+    font-size: 18px;
+
+    color: #64748b;
+
+    pointer-events: none;
+}
+
+
+.ntcn-setting-time-input .form-control {
+    height: 49px;
+
+    padding-left: 48px;
+
+    border-radius: 9px;
+}
+
+
+.ntcn-setting-time-wave {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 17px;
+}
+
+
+.ntcn-setting-time-description {
+    margin-top: 16px;
+
+    font-size: 13px;
+    line-height: 1.6;
+
+    color: #64748b;
+}
+
+
+/* ==========================================
+   기타
+========================================== */
+
+.ntcn-setting-loading {
+    padding: 100px 0;
+
+    text-align: center;
+
+    color: #64748b;
+}
+
+
+.ntcn-setting-empty {
+    padding: 50px 20px;
+
+    text-align: center;
+
+    color: #94a3b8;
+
+    font-size: 14px;
+}
+
+
+/* ==========================================
+   모바일
+========================================== */
+
+@media (max-width: 768px) {
+
+    /* .ntcn-setting-container {
+        padding:
+            18px
+            15px
+            35px;
+    } */
+
+    .ntcn-setting-modal {
+        width: calc(100% - 16px);
+
+        margin: 8px auto;
+    }
+
+    .ntcn-setting-modal-content {
+        border-radius: 20px;
+    }
+
+    .ntcn-setting-header {
+        min-height: 64px;
+
+        padding:
+            14px
+            16px
+            8px;
+    }
+    /* Header */
+
+    /* .ntcn-setting-header {
+        gap: 7px;
+    } */
+
+
+    /* .ntcn-setting-header h2 {
+        font-size: 25px;
+    } */
+
+    .ntcn-setting-title {
+        font-size: 23px;
+    }
+
+    .ntcn-setting-back {
+        margin-right: 8px;
+
+        font-size: 26px;
+    }
+
+    /* .ntcn-setting-back svg {
+        font-size: 28px;
+    } */
+
+
+    .ntcn-setting-description {
+        font-size: 14px;
+    }
+
+
+    /* Card */
+
+    .ntcn-setting-card .card-body {
+        padding: 18px 15px;
+    }
+
+
+    .ntcn-setting-card-header {
+        gap: 10px;
+    }
+
+
+    .ntcn-setting-card-header h5 {
+        font-size: 18px;
+    }
+
+
+    .ntcn-setting-card-header p {
+        font-size: 12px;
+    }
+
+
+    .ntcn-setting-switch-area {
+        font-size: 13px;
+    }
+
+
+    /* 전체 수신방식 */
+
+    .ntcn-setting-method {
+        min-height: 105px;
+    }
+
+
+    .ntcn-setting-method strong {
+        font-size: 13px;
+    }
+
+
+    .ntcn-setting-method-icon {
+        font-size: 25px;
+    }
+
+
+    /* 항목 */
+
+    .ntcn-setting-item-card {
+        overflow-x: auto;
+    }
+
+
+    .ntcn-setting-table-header,
+    .ntcn-setting-row {
+
+        min-width: 570px;
+
+        grid-template-columns:
+            minmax(230px, 1fr)
+            75px
+            75px
+            85px;
+    }
+
+
+    .ntcn-setting-table-header {
+        padding: 0 14px;
+    }
+
+
+    .ntcn-setting-row {
+        padding: 10px 14px;
+    }
+
+
+    .ntcn-setting-icon {
+        width: 44px;
+        height: 44px;
+
+        min-width: 44px;
+
+        font-size: 21px;
+    }
+
+
+    .ntcn-setting-text strong {
+        font-size: 14px;
+    }
+
+
+    .ntcn-setting-text span {
+        font-size: 12px;
+    }
+
+
+    /* 시간 */
+
+    .ntcn-setting-time-area {
+        margin-bottom: 13px;
+    }
+
+
+    .ntcn-setting-time-wave {
+        display: none;
+    }
+}

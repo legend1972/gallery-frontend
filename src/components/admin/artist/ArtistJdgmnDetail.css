@@ -1,0 +1,312 @@
+.artist-review-modal {
+  max-width: 850px;
+}
+
+.artist-review-modal .modal-content {
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.review-modal-header {
+  position: relative;
+  padding: 20px 24px;
+}
+
+.review-modal-header .modal-title {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.review-close-button {
+  position: absolute;
+  right: 15px;
+  top: 12px;
+
+  color: #222;
+  text-decoration: none;
+}
+
+.review-close-button:hover {
+  color: #000;
+}
+
+.review-modal-body {
+  padding: 25px;
+}
+
+/* -----------------------
+   작가 기본정보
+----------------------- */
+
+.artist-summary-section {
+  padding: 0 10px 25px;
+}
+
+.artist-profile-image {
+  width: 145px;
+  height: 145px;
+  object-fit: cover;
+}
+
+.artist-name {
+  margin-bottom: 6px;
+
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.artist-email {
+  margin-bottom: 6px;
+
+  font-size: 16px;
+  color: #333;
+}
+
+.artist-location {
+  font-size: 15px;
+  color: #555;
+}
+
+/* -----------------------
+   대표 작품
+----------------------- */
+
+.representative-work-title {
+  margin-bottom: 12px;
+
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.representative-work-image {
+  width: 130px;
+  height: 100px;
+
+  border-radius: 8px;
+
+  object-fit: cover;
+}
+
+.representative-work-name {
+  margin-bottom: 8px;
+
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.representative-work-info {
+  margin-bottom: 3px;
+
+  font-size: 14px;
+  color: #444;
+}
+
+/* -----------------------
+   카드
+----------------------- */
+
+.review-card {
+  border: 1px solid #e3e3e3;
+  border-radius: 13px;
+
+  box-shadow: none;
+}
+
+.review-card .card-body {
+  padding: 24px;
+}
+
+.info-row {
+  margin-bottom: 17px;
+
+  font-size: 16px;
+}
+
+.info-label {
+  font-weight: 700;
+}
+
+.detail-section {
+  margin-top: 22px;
+}
+
+.detail-section h6 {
+  margin-bottom: 10px;
+
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.artist-introduction {
+  margin: 0;
+
+  line-height: 1.8;
+  white-space: pre-line;
+}
+
+.career-list {
+  padding-left: 20px;
+
+  margin-bottom: 0;
+}
+
+.career-list li {
+  margin-bottom: 7px;
+}
+
+/* -----------------------
+   심사 상태
+----------------------- */
+
+.review-status-badge {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 7px 12px;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  border-radius: 20px;
+}
+
+/* -----------------------
+   textarea
+----------------------- */
+
+.textarea-wrapper {
+  position: relative;
+}
+
+.textarea-wrapper textarea {
+  resize: none;
+
+  padding: 15px 15px 35px;
+
+  line-height: 1.6;
+}
+
+.textarea-wrapper textarea:disabled {
+  background-color: #fff;
+  color: #999;
+}
+
+.textarea-count {
+  position: absolute;
+
+  right: 12px;
+  bottom: 10px;
+
+  font-size: 13px;
+
+  color: #555;
+}
+
+/* -----------------------
+   체크박스
+----------------------- */
+
+.form-check-input {
+  cursor: pointer;
+}
+
+.form-check-input:checked {
+  background-color: #4b27cc;
+  border-color: #4b27cc;
+}
+
+.form-check-label {
+  cursor: pointer;
+}
+
+/* -----------------------
+   버튼
+----------------------- */
+
+.review-button-area {
+  display: flex;
+  flex-direction: column;
+
+  gap: 9px;
+}
+
+.review-action-button {
+  min-height: 54px;
+
+  border-radius: 8px;
+
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.review-button-area .btn-primary {
+  background-color: #4c22d4;
+  border-color: #4c22d4;
+}
+
+.review-button-area .btn-warning {
+  background-color: #ff7a00;
+  border-color: #ff7a00;
+
+  color: white;
+}
+
+.notification-back-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    margin-right: 18px;
+
+    color: #111;
+
+    font-size: 32px;
+
+    text-decoration: none;
+}
+
+
+.notification-back-button:hover,
+.notification-back-button:focus {
+    color: #111;
+}
+
+.notification-title {
+    font-size: 23px;
+}
+
+.notification-title {
+    font-size: 28px;
+
+    font-weight: 700;
+}
+
+/* -----------------------
+   모바일
+----------------------- */
+
+@media (max-width: 767px) {
+  .review-modal-body {
+    padding: 18px;
+  }
+
+  .artist-profile-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .artist-name {
+    font-size: 22px;
+  }
+
+  .representative-work-image {
+    width: 110px;
+    height: 85px;
+  }
+
+  .review-card .card-body {
+    padding: 18px;
+  }
+}

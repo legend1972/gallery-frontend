@@ -1,0 +1,568 @@
+/* =========================================================
+   전체
+========================================================= */
+
+.artist-application-page {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 26px 28px 50px;
+  background: #ffffff;
+  color: #191919;
+}
+
+.artist-application-page * {
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   상단 영역
+========================================================= */
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.page-title {
+  margin: 0 0 8px;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.page-description {
+  margin: 0;
+  color: #56657d;
+  font-size: 14px;
+}
+
+.guide-button {
+  height: 42px;
+  padding: 0 16px;
+  background: #fff;
+  border-color: #d7dce5;
+  color: #222;
+  font-size: 14px;
+}
+
+/* =========================================================
+   Form 전체
+========================================================= */
+
+.application-form {
+  padding: 28px 34px 16px;
+  border: 1px solid #e2e6ed;
+  border-radius: 7px;
+  background: #fff;
+}
+
+/* =========================================================
+   Section
+========================================================= */
+
+.form-section {
+  padding-bottom: 26px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #e8eaf0;
+}
+
+.form-section.no-bottom-border {
+  border-bottom: 0;
+  margin-bottom: 16px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.section-title i {
+  color: #2f20dd;
+  font-size: 25px;
+}
+
+.section-title strong {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.required {
+  margin-left: 4px;
+  color: #ef2f3f;
+}
+
+/* =========================================================
+   Bootstrap form 커스터마이징
+========================================================= */
+
+.artist-application-page .form-label {
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #222;
+}
+
+.artist-application-page .form-control,
+.artist-application-page .form-select {
+  min-height: 44px;
+  border-color: #d5dce7;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+.artist-application-page .form-control::placeholder {
+  color: #72809a;
+}
+
+.artist-application-page .form-control:focus,
+.artist-application-page .form-select:focus {
+  border-color: #4a3df1;
+  box-shadow: 0 0 0 0.15rem rgba(74, 61, 241, 0.12);
+}
+
+.artist-application-page textarea.form-control {
+  resize: none;
+  padding: 14px 16px 30px;
+}
+
+/* =========================================================
+   글자수
+========================================================= */
+
+.textarea-wrapper {
+  position: relative;
+}
+
+.text-count {
+  position: absolute;
+  right: 12px;
+  bottom: 8px;
+  font-size: 13px;
+  color: #405077;
+}
+
+/* =========================================================
+   이미지 업로드
+========================================================= */
+
+.image-upload-box {
+  width: 100%;
+  min-height: 205px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 22px;
+
+  border: 1px solid #d6dceb;
+  border-radius: 6px;
+
+  cursor: pointer;
+
+  background: #fff;
+
+  transition:
+    border-color 0.2s,
+    background 0.2s;
+}
+
+.image-upload-box:hover {
+  border-color: #4b3bec;
+  background: #fcfcff;
+}
+
+.upload-icon {
+  margin-bottom: 12px;
+  font-size: 32px;
+  color: #3324e7;
+}
+
+.image-upload-box strong {
+  margin-bottom: 13px;
+  color: #3224dd;
+  font-size: 14px;
+}
+
+.image-upload-box ul {
+  width: 100%;
+  padding-left: 24px;
+  margin: 0;
+
+  color: #5c6d88;
+  font-size: 12px;
+  line-height: 2;
+}
+
+.image-preview-wrapper {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.image-preview {
+  width: 145px;
+  height: 145px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.image-change-text {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #4235d8;
+}
+
+/* =========================================================
+   안내 박스
+========================================================= */
+
+.info-box {
+  min-height: 205px;
+  padding: 28px 28px;
+
+  border: 1px solid #ddd5ff;
+  border-radius: 6px;
+
+  background:
+    linear-gradient(
+      115deg,
+      #fcfbff,
+      #f8f5ff
+    );
+}
+
+.info-box h6 {
+  margin-bottom: 18px;
+  color: #2d20d3;
+  font-weight: 700;
+}
+
+.info-box ul {
+  padding-left: 23px;
+  margin: 0;
+
+  color: #667590;
+  font-size: 13px;
+  line-height: 2.1;
+}
+
+/* =========================================================
+   경력 / SNS 테이블
+========================================================= */
+
+.career-table-wrapper,
+.sns-table-wrapper {
+  overflow-x: auto;
+}
+
+.career-table,
+.sns-table {
+  border-color: #e0e4ec;
+  vertical-align: middle;
+}
+
+.career-table thead th,
+.sns-table thead th {
+  padding: 6px 14px;
+
+  background: #fafbfc;
+
+  border-color: #e0e4ec;
+
+  color: #48566c;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.career-table tbody td,
+.sns-table tbody td {
+  padding: 8px 12px;
+  border-color: #e0e4ec;
+}
+
+.career-table .form-control,
+.career-table .form-select,
+.sns-table .form-control,
+.sns-table .form-select {
+  min-height: 38px;
+  height: 38px;
+  font-size: 13px;
+}
+
+.section-help {
+  margin: 8px 0 0;
+  color: #596a86;
+  font-size: 12px;
+}
+
+.add-button {
+  min-width: 105px;
+  border-color: #d9d3ff;
+  color: #3424d8;
+  font-size: 13px;
+}
+
+.add-button:hover {
+  background: #f4f2ff;
+  border-color: #5b4bed;
+  color: #2c1bc8;
+}
+
+/* =========================================================
+   삭제 버튼
+========================================================= */
+
+.delete-icon-button {
+  width: 34px;
+  height: 34px;
+
+  padding: 0;
+
+  border: 0;
+  background: transparent;
+
+  color: #31416e;
+
+  cursor: pointer;
+}
+
+.delete-icon-button:hover {
+  color: #e53e4f;
+}
+
+/* =========================================================
+   SNS
+========================================================= */
+
+.sns-type {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sns-type .form-select {
+  flex: 1;
+}
+
+.sns-icon {
+  flex-shrink: 0;
+  width: 22px;
+  text-align: center;
+  font-size: 19px;
+}
+
+.instagram {
+  color: #e4405f;
+}
+
+.youtube {
+  color: #e60000;
+}
+
+.behance-icon {
+  flex-shrink: 0;
+
+  width: 22px;
+  height: 22px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 5px;
+
+  background: #1769ff;
+  color: #fff;
+
+  font-size: 9px;
+  font-weight: 700;
+}
+
+/* =========================================================
+   하단 신청 안내
+========================================================= */
+
+.application-guide {
+  padding: 16px 20px;
+  margin-top: 10px;
+
+  border: 1px solid #ded8ff;
+  border-radius: 6px;
+
+  background: #f8f6ff;
+}
+
+.guide-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 8px;
+
+  color: #3024d6;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.application-guide ul {
+  padding-left: 30px;
+  margin: 0;
+
+  color: #4e42c7;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   하단 버튼
+========================================================= */
+
+.action-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 14px;
+
+  margin-top: 14px;
+}
+
+.temp-save-button,
+.submit-button {
+  min-width: 170px;
+  height: 46px;
+
+  border-radius: 5px;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.temp-save-button {
+  background: #fff;
+  border-color: #d5dae3;
+  color: #222;
+}
+
+.submit-button {
+  min-width: 205px;
+
+  border: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      #4122b8,
+      #4010bd
+    );
+}
+
+.submit-button:hover,
+.submit-button:focus {
+  background:
+    linear-gradient(
+      90deg,
+      #351a9d,
+      #350ca4
+    );
+}
+
+/* =========================================================
+   태블릿
+========================================================= */
+
+@media (max-width: 991px) {
+  .artist-application-page {
+    padding: 20px;
+  }
+
+  .application-form {
+    padding: 24px;
+  }
+}
+
+/* =========================================================
+   모바일
+========================================================= */
+
+@media (max-width: 767px) {
+  .artist-application-page {
+    padding: 16px 12px 30px;
+  }
+
+  .page-header {
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .page-title {
+    font-size: 24px;
+  }
+
+  .page-description {
+    font-size: 12px;
+  }
+
+  .guide-button {
+    flex-shrink: 0;
+    font-size: 12px;
+  }
+
+  .application-form {
+    padding: 20px 16px;
+  }
+
+  .section-header {
+    align-items: flex-start;
+  }
+
+  .section-title {
+    font-size: 16px;
+  }
+
+  .section-title strong {
+    font-size: 16px;
+  }
+
+  .section-title i {
+    font-size: 21px;
+  }
+
+  .image-upload-box {
+    min-height: 190px;
+  }
+
+  .info-box {
+    min-height: auto;
+  }
+
+  .career-table {
+    min-width: 760px;
+  }
+
+  .sns-table {
+    min-width: 650px;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+
+  .temp-save-button,
+  .submit-button {
+    width: 100%;
+  }
+}

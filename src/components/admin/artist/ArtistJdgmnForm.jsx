@@ -1,4 +1,4 @@
-import { Badge, Button, Card, Col, Container, Form, InputGroup, Nav, Row, Spinner } from "react-bootstrap";
+import { Badge, Button, Card, Col, Container, Form, Image, InputGroup, Nav, Row, Spinner } from "react-bootstrap";
 import "./ArtistJdgmnForm.css";
 import { useEffect, useRef, useState } from "react";
 import api from "../../../api/api";
@@ -364,8 +364,8 @@ export default function ArtistJdgmnForm() {
                                                         <strong>{writrJdgmn.rqstdt}</strong>
                                                     </div>
                                                     <div className="applicant-area">
-                                                        <img src={writrJdgmn.writrFileUrl} alt={writrJdgmn.nm} className="profile-image"/>
-                                                        <div  className="applicant-info">
+                                                        <Image src={writrJdgmn.writrFileUrl} roundedCircle alt={writrJdgmn.nm} className="artwork-image"/>
+                                                        <div className="applicant-info">
                                                             <div className="applicant-name">
                                                                 {writrJdgmn.nm}
                                                             </div>
@@ -373,7 +373,7 @@ export default function ArtistJdgmnForm() {
                                                                 {writrJdgmn.email}
                                                             </div>
                                                         </div>
-                                                        <img src={writrJdgmn.reprsntPrdctFileUrl} alt="대표 작품" className="artwork-image" />
+                                                        <Image src={writrJdgmn.reprsntPrdctFileUrl} alt="대표 작품" className="artwork-image" />
                                                     </div>
                                                 </Col>
                                                 <Col xs={12} lg={6}>

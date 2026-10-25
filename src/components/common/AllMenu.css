@@ -1,0 +1,356 @@
+/* ===============================
+   전체 메뉴 페이지
+=============================== */
+
+.all-menu-page {
+    min-height: 100%;
+    background-color: #f2f5f9;
+    padding: 24px 0 35px;
+}
+
+.all-menu-title {
+    font-size: 28px;
+    font-weight: 800;
+    color: #111a2e;
+    margin-bottom: 20px;
+}
+
+/* ===============================
+   검색창
+=============================== */
+
+.all-menu-search {
+    height: 60px;
+    margin-bottom: 20px;
+    background: #fff;
+    border: 1px solid #dbe2ec;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.all-menu-search .input-group-text {
+    background: transparent;
+    border: none;
+    padding-left: 20px;
+    color: #8791a2;
+}
+
+.all-menu-search .form-control {
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    font-size: 15px;
+    min-width: 0;
+}
+
+.all-menu-search .form-control:focus {
+    box-shadow: none;
+}
+
+.all-menu-search .btn {
+    border: none;
+    background: transparent;
+    color: #2467c7;
+    padding: 0 18px;
+}
+
+/* ===============================
+   메뉴 그룹 카드
+=============================== */
+
+.all-menu-group-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.all-menu-card {
+    border: none !important;
+    border-radius: 23px !important;
+    background-color: #fff;
+    box-shadow: 0 4px 18px rgba(40, 55, 80, 0.03);
+    overflow: hidden;
+}
+
+.all-menu-card .card-body {
+    padding: 20px 28px 12px;
+}
+
+/* ===============================
+   그룹 제목 Row
+=============================== */
+
+.all-menu-group-header {
+    margin: 0;
+    padding-bottom: 10px;
+    --bs-gutter-x: 12px;
+}
+
+.all-menu-group-header > .col,
+.all-menu-group-header > .col-auto {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.all-menu-group-name {
+    margin: 0;
+    font-size: 21px;
+    font-weight: 800;
+    color: #151c2d;
+}
+
+.all-menu-group-description {
+    font-size: 13px;
+    color: #768299;
+    text-align: right;
+    min-width: 0;
+}
+
+/* ===============================
+   메뉴 버튼
+=============================== */
+
+.all-menu-item.btn {
+    display: block;
+    width: 100%;
+    padding: 9px 0;
+    min-height: 74px;
+
+    border: none;
+    border-bottom: 1px solid #edf0f5;
+    border-radius: 0;
+
+    background: transparent;
+    text-decoration: none;
+    text-align: left;
+    box-shadow: none;
+}
+
+.all-menu-item.btn:last-child {
+    border-bottom: none;
+}
+
+.all-menu-item.btn:hover {
+    background: #fafbfe;
+    text-decoration: none;
+}
+
+/* ===============================
+   메뉴 Row
+=============================== */
+
+.all-menu-item-row {
+    width: 100%;
+    min-height: 55px;
+
+    margin: 0;
+    flex-wrap: nowrap;
+
+    --bs-gutter-x: 14px;
+}
+
+/* 아이콘 Col */
+.all-menu-icon-col {
+    padding-left: 0;
+    padding-right: 0;
+    margin-right: 14px;
+}
+
+/* 메뉴명 Col */
+.all-menu-name-col {
+    padding-left: 0;
+    padding-right: 0;
+    margin-right: 18px;
+}
+
+/* 설명 Col */
+.all-menu-desc-col {
+    min-width: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* 화살표 Col */
+.all-menu-arrow-col {
+    padding-left: 10px;
+    padding-right: 0;
+    color: #7f8a9d;
+}
+
+/* ===============================
+   아이콘 디자인
+=============================== */
+
+.all-menu-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 55px;
+    height: 55px;
+
+    border-radius: 16px;
+    font-size: 23px;
+}
+
+.all-menu-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.all-menu-icon.icon-pink {
+    background: #ffebef;
+    color: #fc3158;
+}
+
+.all-menu-icon.icon-green {
+    background: #e1faec;
+    color: #0dbf70;
+}
+
+.all-menu-icon.icon-purple {
+    background: #f0e9ff;
+    color: #843df1;
+}
+
+.all-menu-icon.icon-orange {
+    background: #fff0dd;
+    color: #ff8c13;
+}
+
+.all-menu-icon.icon-blue {
+    background: #e6f2ff;
+    color: #1877ed;
+}
+
+.all-menu-icon.icon-yellow {
+    background: #fff5da;
+    color: #edab19;
+}
+
+/* ===============================
+   메뉴명 / 설명
+=============================== */
+
+.all-menu-item-name {
+    display: block;
+    min-width: 120px;
+
+    color: #151d2e;
+    font-size: 16px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.all-menu-item-description {
+    display: block;
+
+    color: #78849b;
+    font-size: 13px;
+    font-weight: 400;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* ===============================
+   로딩 및 결과 없음
+=============================== */
+
+.all-menu-empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    min-height: 140px;
+    border-radius: 20px;
+
+    background: white;
+    color: #8792a4;
+}
+
+/* ===============================
+   모바일
+=============================== */
+
+@media (max-width: 768px) {
+
+    .all-menu-page {
+        padding: 18px 0 25px;
+    }
+
+    .all-menu-title {
+        font-size: 24px;
+    }
+
+    .all-menu-card .card-body {
+        padding: 17px 16px 10px;
+    }
+
+    .all-menu-group-name {
+        font-size: 18px;
+    }
+
+    .all-menu-group-description {
+        font-size: 11px;
+    }
+
+    .all-menu-item-row {
+        --bs-gutter-x: 8px;
+        min-height: 47px;
+    }
+
+    .all-menu-icon {
+        width: 46px;
+        height: 46px;
+        border-radius: 13px;
+    }
+
+    .all-menu-icon svg {
+        width: 21px;
+        height: 21px;
+    }
+
+    .all-menu-icon-col {
+        margin-right: 10px;
+    }
+
+    .all-menu-name-col {
+        margin-right: 10px;
+    }
+
+    .all-menu-item-name {
+        min-width: 90px;
+        font-size: 14px;
+    }
+
+    .all-menu-item-description {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 420px) {
+
+    .all-menu-card .card-body {
+        padding: 15px 12px 9px;
+    }
+
+    .all-menu-item-name {
+        min-width: 80px;
+        font-size: 13px;
+    }
+
+    .all-menu-name-col {
+        margin-right: 7px;
+    }
+
+    .all-menu-icon-col {
+        margin-right: 7px;
+    }
+
+    .all-menu-arrow-col {
+        padding-left: 4px;
+    }
+}

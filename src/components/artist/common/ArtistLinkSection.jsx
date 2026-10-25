@@ -1,11 +1,11 @@
 import { Button, Form } from "react-bootstrap";
 import SectionTitle from "../../common/SectionTitle";
 
-export default function ArtistLinkSection({sites, siteList, changeSite, removeSite, addSite}) {
+export default function ArtistLinkSection({sites, siteList, changeSite, removeSite, addSite, num}) {
     return (
             <section>
                 <div className="section-header">
-                    <SectionTitle icon="bi-link-45deg" number="5." title="웹사이트/SNS"/>
+                    <SectionTitle icon="bi-link-45deg" number={`${num}. `} title="웹사이트/SNS"/>
                     <Button type="button" variant="outline-primary" size="sm" className="add-button" onClick={addSite}><i className="bi bi-plus-lg me-2"/>링크 추가</Button>
                 </div>
                 <div className="career-table-wrapper">

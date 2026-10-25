@@ -1,38 +1,273 @@
+/* ==============================
+   Header 전체
+================================ */
+
+.app-header {
+    height: 64px;
+    flex-shrink: 0;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border-bottom: 1px solid #ececf2;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    backdrop-filter: blur(8px);
+}
+
+.header-container {
+    height: 100%;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.header-inner {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* ==============================
+   로고
+================================ */
+
+.header-logo {
+    padding: 0 !important;
+    margin: 0;
+
+    color: #202124 !important;
+
+    font-size: 24px;
+    font-weight: 700;
+
+    letter-spacing: -0.8px;
+
+    text-decoration: none !important;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.header-logo:hover {
+    color: #6441d8 !important;
+    transform: translateY(-1px);
+}
+
+
+/* ==============================
+   오른쪽 영역
+================================ */
+
+.header-actions {
+    display: flex;
+    align-items: center;
+
+    gap: 10px !important;
+}
+
+
+/* ==============================
+   사용자 이름
+================================ */
+
+.header-user {
+    display: flex;
+    align-items: center;
+
+    margin-right: 4px;
+
+    font-size: 14px;
+}
+
+.header-user-name {
+    color: #3d2a7a;
+
+    font-weight: 600;
+}
+
+.header-user-suffix {
+    margin-left: 2px;
+
+    color: #666;
+}
+
+
+/* ==============================
+   공통 아이콘 버튼
+================================ */
+
+.header-icon-button {
+    width: 38px;
+    height: 38px;
+
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 !important;
+
+    border-radius: 50% !important;
+
+    color: #444 !important;
+
+    text-decoration: none !important;
+
+    transition:
+        background-color 0.18s ease,
+        color 0.18s ease,
+        transform 0.18s ease;
+}
+
+.header-icon-button:hover {
+    color: #6040c9 !important;
+
+    background: #f3f0ff;
+
+    transform: translateY(-1px);
+}
+
+.header-icon-button:focus,
+.header-icon-button:active {
+    box-shadow: none !important;
+}
+
+
+/* ==============================
+   로그인 / 로그아웃 버튼
+================================ */
+
+.header-login-button {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    margin-left: 2px;
+
+    border: 1px solid #ddd9ec !important;
+
+    border-radius: 10px !important;
+
+    background: #ffffff !important;
+
+    color: #5f43c7 !important;
+
+    transition:
+        background-color 0.18s ease,
+        border-color 0.18s ease,
+        color 0.18s ease,
+        transform 0.18s ease,
+        box-shadow 0.18s ease;
+}
+
+.header-login-button:hover {
+    background: #f3f0ff !important;
+
+    border-color: #b9a9f0 !important;
+
+    color: #4e2fc0 !important;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 4px 12px rgba(89, 61, 181, 0.12);
+}
+
+.header-login-button:focus,
+.header-login-button:active {
+    box-shadow:
+        0 0 0 3px rgba(100, 65, 216, 0.12) !important;
+}
+
+
+/* ==============================
+   알림
+================================ */
+
 .notification-area-h {
-  position: relative;
+    position: relative;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  color: #29436d;
-
-  cursor: pointer;
-
-  border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .notification-count-h {
-  position: absolute;
+    position: absolute;
 
-  top: -8px;
-  right: -8px;
+    top: -7px;
+    right: -9px;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    min-width: 17px;
+    height: 17px;
 
-  min-width: 18px;
-  height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  padding: 0 5px;
+    padding: 0 4px;
 
-  border-radius: 50%;
+    border: 2px solid #ffffff;
 
-  background-color: #f11b2c;
-  color: #ffffff;
+    border-radius: 999px;
 
-  font-size: 11px;
-  font-weight: 700;
-  line-height: 1;
+    background: #e84b5f;
+
+    color: #ffffff;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    line-height: 1;
+}
+
+
+/* ==============================
+   모바일
+================================ */
+
+@media (max-width: 768px) {
+
+    .app-header {
+        height: 58px;
+    }
+
+    .header-container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .header-logo {
+        font-size: 21px;
+    }
+
+    .header-actions {
+        gap: 5px !important;
+    }
+
+    .header-user {
+        display: none;
+    }
+
+    .header-icon-button {
+        width: 34px;
+        height: 34px;
+    }
+
+    .header-login-button {
+        width: 36px;
+        height: 36px;
+
+        border-radius: 9px !important;
+    }
 }

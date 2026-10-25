@@ -1,10 +1,10 @@
 import { Col, Form, Row } from "react-bootstrap";
 import SectionTitle from "../../common/SectionTitle";
 
-export default function ArtistBasicInfoSection({formData, handleChange, activityTypeList}) {
+export default function ArtistBasicInfoSection({formData, handleChange, activityTypeList, num}) {
     return (
             <section className="form-section">
-                    <SectionTitle icon="bi-person" number="1." title="기본 정보"/>
+                    <SectionTitle icon="bi-person" number={`${num}. `} title="기본 정보"/>
                     <Row className="g-4">
                         <Col xs={12}>
                             <Row>

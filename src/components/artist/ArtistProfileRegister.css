@@ -1,0 +1,652 @@
+.profile-register {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 25px 30px 50px;
+  background: #fff;
+  color: #222;
+}
+
+/* =============================
+   Page Header
+============================= */
+
+.page-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.page-header h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.page-header p {
+  margin: 10px 0 0;
+  color: #53627c;
+  font-size: 14px;
+}
+
+.guide-button {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: #fff;
+  border-color: #dadde6;
+  color: #222;
+}
+
+/* =============================
+   Step
+============================= */
+
+.profile-step {
+  max-width: 800px;
+  margin: 0 auto 25px;
+  display: flex;
+}
+
+.step-container {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+}
+
+.step {
+  flex-shrink: 0;
+  width: 90px;
+  text-align: center;
+}
+
+.step-number {
+  width: 38px;
+  height: 38px;
+  margin: 0 auto 8px;
+  border: 1px solid #d3d7e2;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  font-weight: 600;
+}
+
+.step.active .step-number {
+  background: #4614c7;
+  border-color: #4614c7;
+  color: #fff;
+}
+
+.step-label {
+  color: #53627c;
+  font-size: 14px;
+}
+
+.step.active .step-label {
+  color: #4614c7;
+  font-weight: 700;
+}
+
+.step-line {
+  flex: 1;
+  border-top: 1px dashed #c7cbda;
+  margin-top: 19px;
+}
+
+/* =============================
+   자동 반영 안내
+============================= */
+
+.auto-guide {
+  display: flex;
+  gap: 13px;
+  padding: 18px 20px;
+  margin-bottom: 18px;
+  border: 1px solid #ddd2ff;
+  border-radius: 7px;
+  background: #faf8ff;
+  color: #4217b8;
+}
+
+.auto-guide-icon {
+  flex-shrink: 0;
+  font-size: 24px;
+}
+
+.auto-guide strong {
+  font-size: 15px;
+}
+
+.auto-guide p {
+  margin: 4px 0 0;
+  color: #53627c;
+  font-size: 13px;
+}
+
+/* =============================
+   Section
+============================= */
+
+.profile-section {
+  margin-bottom: 14px;
+  padding: 18px 20px;
+  border: 1px solid #e5e7ee;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.section-title-area {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.section-title-area h2 {
+  margin: 0;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.section-title-area p {
+  margin: 5px 0 15px;
+  color: #63708a;
+  font-size: 13px;
+}
+
+.section-icon {
+  display: flex;
+  align-items: center;
+  color: #4d19dc;
+  font-size: 24px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.section-add-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 38px;
+  padding: 0 16px;
+  background: #fff;
+  border-color: #d8cbff;
+  color: #4614c7;
+  font-weight: 600;
+}
+
+.section-add-button:hover {
+  color: #4614c7;
+  background: #faf8ff;
+  border-color: #bdaaff;
+}
+
+/* =============================
+   Form
+============================= */
+
+.form-row {
+  margin-top: 15px;
+}
+
+.form-label {
+  margin-bottom: 7px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.required {
+  margin-left: 4px;
+  color: #ff3737;
+}
+
+.form-control,
+.form-select {
+  min-height: 43px;
+  border-color: #dce0e9;
+  font-size: 14px;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #7151db;
+  box-shadow: 0 0 0 2px rgb(113 81 219 / 10%);
+}
+
+/* =============================
+   장르
+============================= */
+
+.genre-select-box {
+  position: relative;
+  min-height: 43px;
+  border: 1px solid #dce0e9;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  background: #fff;
+}
+
+.genre-chip-area {
+  display: flex;
+  gap: 6px;
+  padding-left: 8px;
+  z-index: 2;
+}
+
+.genre-chip {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  padding: 5px 8px;
+  border-radius: 6px;
+  background: #eee8ff;
+  color: #4e1dc5;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.genre-chip button {
+  border: none;
+  background: transparent;
+  display: flex;
+  padding: 0;
+  color: #4e1dc5;
+}
+
+.genre-select {
+  position: absolute;
+  inset: 0;
+  min-height: 41px;
+  border: none;
+  background-color: transparent;
+  color: transparent;
+}
+
+.genre-select:focus {
+  box-shadow: none;
+}
+
+/* =============================
+   자기소개
+============================= */
+
+.textarea-wrapper {
+  position: relative;
+}
+
+.textarea-wrapper textarea {
+  resize: none;
+  min-height: 110px;
+  padding-bottom: 30px;
+}
+
+.textarea-count {
+  position: absolute;
+  right: 13px;
+  bottom: 9px;
+  color: #53627c;
+  font-size: 13px;
+}
+
+/* =============================
+   프로필 사진
+============================= */
+
+.profile-image-area {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+  padding: 8px 12px;
+}
+
+.profile-image-wrapper {
+  position: relative;
+  width: 125px;
+  height: 125px;
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.camera-circle {
+  position: absolute;
+  right: -2px;
+  bottom: 3px;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #ded4ff;
+  border-radius: 50%;
+  background: #fff;
+  color: #4817cb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-image-guide p {
+  margin: 0 0 4px;
+  color: #53627c;
+  font-size: 13px;
+}
+
+.profile-image-guide .btn {
+  margin-top: 10px;
+  min-width: 120px;
+  border-color: #9b7bff;
+  color: #4e1dc5;
+  background: #fff;
+}
+
+/* =============================
+   경력
+============================= */
+
+.career-table {
+  border: 1px solid #e4e6ed;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.career-header,
+.career-row {
+  display: grid;
+  grid-template-columns:
+    220px
+    220px
+    1fr
+    45px;
+  align-items: center;
+}
+
+.career-header {
+  min-height: 34px;
+  background: #fafafd;
+  border-bottom: 1px solid #e4e6ed;
+}
+
+.career-header > div {
+  padding: 0 14px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.career-row {
+  padding: 6px 12px;
+  gap: 12px;
+}
+
+.career-row + .career-row {
+  border-top: 1px solid #eceef4;
+}
+
+.year-field {
+  position: relative;
+}
+
+.year-field svg {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #566383;
+}
+
+.year-field input {
+  padding-right: 38px;
+}
+
+/* =============================
+   URL/SNS
+============================= */
+
+.link-table {
+  border: 1px solid #e4e6ed;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.link-header,
+.link-row {
+  display: grid;
+  grid-template-columns:
+    300px
+    1fr
+    55px;
+  align-items: center;
+}
+
+.link-header {
+  min-height: 34px;
+  background: #fafafd;
+  border-bottom: 1px solid #e4e6ed;
+}
+
+.link-header > div {
+  padding: 0 14px;
+  font-size: 13px;
+  color: #53627c;
+}
+
+.link-header > div:last-child {
+  text-align: center;
+}
+
+.link-row {
+  padding: 5px 12px;
+  gap: 12px;
+}
+
+.link-row + .link-row {
+  border-top: 1px solid #eceef4;
+}
+
+.link-type {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.link-type .form-select {
+  flex: 1;
+}
+
+.link-icon {
+  flex-shrink: 0;
+  font-size: 20px;
+}
+
+.instagram {
+  color: #e1306c;
+}
+
+.behance {
+  color: #1769ff;
+}
+
+/* =============================
+   행 삭제
+============================= */
+
+.row-delete-button {
+  border: none;
+  background: transparent;
+  color: #34456d;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* =============================
+   작품 안내
+============================= */
+
+.artwork-guide {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+  padding: 15px;
+  border: 1px solid #dbd0ff;
+  border-radius: 6px;
+  background: #faf8ff;
+  color: #4a1dd0;
+}
+
+.artwork-guide > svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  font-size: 21px;
+}
+
+.artwork-guide strong {
+  font-size: 14px;
+}
+
+.artwork-guide ul {
+  margin: 6px 0 0;
+  padding-left: 18px;
+  color: #53627c;
+  font-size: 13px;
+}
+
+/* =============================
+   하단 버튼
+============================= */
+
+.bottom-button-area {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.cancel-button {
+  width: 180px;
+  height: 46px;
+  background: #fff;
+  color: #222;
+  border-color: #dcdfe7;
+}
+
+.next-button {
+  width: 210px;
+  height: 46px;
+  background: #4614c7;
+  border-color: #4614c7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 55px;
+}
+
+.next-button:hover {
+  background: #36109e;
+  border-color: #36109e;
+}
+
+/* =============================
+   Responsive
+============================= */
+
+@media (max-width: 768px) {
+  .profile-register {
+    padding: 18px 12px 35px;
+  }
+
+  .page-header h1 {
+    font-size: 25px;
+  }
+
+  .guide-button {
+    font-size: 12px;
+  }
+
+  .profile-step {
+    max-width: none;
+  }
+
+  .step {
+    width: 65px;
+  }
+
+  .step-label {
+    font-size: 11px;
+  }
+
+  .step-number {
+    width: 32px;
+    height: 32px;
+  }
+
+  .step-line {
+    margin-top: 16px;
+  }
+
+  .profile-image-area {
+    gap: 25px;
+  }
+
+  .profile-image-wrapper {
+    width: 100px;
+    height: 100px;
+  }
+
+  .career-header {
+    display: none;
+  }
+
+  .career-row {
+    grid-template-columns: 1fr 1fr 40px;
+  }
+
+  .career-row > :nth-child(3) {
+    grid-column: 1 / span 2;
+  }
+
+  .career-row > :nth-child(4) {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+  }
+
+  .link-header {
+    display: none;
+  }
+
+  .link-row {
+    grid-template-columns: 1fr 40px;
+  }
+
+  .link-type {
+    grid-column: 1;
+  }
+
+  .link-row > input {
+    grid-column: 1;
+  }
+
+  .link-row > button {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+
+  .bottom-button-area {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cancel-button,
+  .next-button {
+    width: 100%;
+  }
+}

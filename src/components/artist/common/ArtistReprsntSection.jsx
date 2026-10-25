@@ -3,10 +3,10 @@ import SectionTitle from "../../common/SectionTitle";
 import ImageUploadBox from "../../common/ImageUploadBox";
 import DatePicker from "react-datepicker";
 
-export default function ArtistReprsntSection({reprsntPrdctFileNo, reprsntPrdctImageNo, reprsntPrdctImageFile, handleReprsntPrdctFileNo, formData, handleChange}) {
+export default function ArtistReprsntSection({reprsntPrdctFileNo, reprsntPrdctImageNo, reprsntPrdctImageFile, handleReprsntPrdctFileNo, formData, handleChange, num}) {
     return (
             <section className="form-section">
-                <SectionTitle icon="bi-image" number="3." title="대표 작품"/>
+                <SectionTitle icon="bi-image" number={`${num}. `} title="대표 작품"/>
                 <Row className="g-4">
                     <Col md={4}>
                         <ImageUploadBox

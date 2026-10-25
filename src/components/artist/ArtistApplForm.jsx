@@ -1,10 +1,10 @@
-import { Button, Col, Form, Row } from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
 import "./ArtistApplForm.css";
-import SectionTitle from "../common/SectionTitle";
+// import SectionTitle from "../common/SectionTitle";
 import { useEffect, useRef, useState } from "react";
 import api from "../../api/api";
-import ImageUploadBox from "../common/ImageUploadBox";
-import DatePicker from "react-datepicker";
+// import ImageUploadBox from "../common/ImageUploadBox";
+// import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { useNavigate } from "react-router-dom";
 import ArtistBasicInfoSection from "./common/ArtistBasicInfoSection";
@@ -12,6 +12,7 @@ import ArtistProfileImageSection from "./common/ArtistProfileImageSection";
 import ArtistCareerSection from "./common/ArtistCareerSection";
 import ArtistLinkSection from "./common/ArtistLinkSection";
 import ArtistReprsntSection from "./common/ArtistReprsntSection";
+import {validateImageFile} from "../../utils/fileUtils";
 
 //bi-person 등은 bootstrap-icons/font/bootstrap-icons.css 에서 지원
 //xs={12}: xs: Extra Small (모바일 크기부터 적용된다는 의미), 12: 한 행(Row) 전체 12칸을 모두 사용한다는 뜻
@@ -131,22 +132,6 @@ export default function ArtistApplForm() {
 
         fetchActivityTypeList();
     }, []);
-
-    //파일 유효성 검사
-    const validateImageFile = (file) => {
-        const allowedTypes = ["image/jpeg", "image/png"];
-        if(!allowedTypes.includes(file.type)) {
-            alert("JPG, JPEG, PNG 이미지 파일만 등록할 수 있습니다.");
-            return false;
-        }
-
-        if(file.size > 5 * 1024 * 1024) {
-            alert("파일 크기는 최대 5MB 까지 등록할 수 있습니다.");
-            return false;
-        }
-
-        return true;
-    };
 
     //작가 프로필 파일 
     const handleWritrFileNo = (e) => {
@@ -355,11 +340,11 @@ export default function ArtistApplForm() {
                 <h1 className="h2 fw-bold mb-2">{writrMberNo ? "작가 정보 수정" : "작가 등록 신청"}</h1>
                 <p className="text-secondary mb-0">작가 정보를 입력하시면 관리자 검토 후 승인됩니다.</p>
                 <hr className="my-4 my-lg-5"></hr>
-                <ArtistBasicInfoSection formData={formData} handleChange={handleChange} activityTypeList={activityTypeList}/>
-                <ArtistProfileImageSection writrImageNo={writrImageNo} writrImageFile={writrImageFile} handleWritrFileNo={handleWritrFileNo} writrFileNo={writrFileNo}/>
-                <ArtistReprsntSection reprsntPrdctFileNo={reprsntPrdctFileNo} reprsntPrdctImageNo={reprsntPrdctImageNo} reprsntPrdctImageFile={reprsntPrdctImageFile} handleReprsntPrdctFileNo={handleReprsntPrdctFileNo} formData={formData} handleChange={handleChange}/>
-                <ArtistCareerSection careers={careers} careerSeList={careerSeList} removeCareer={removeCareer} changeCareer={changeCareer} addCareer={addCareer}/>
-                <ArtistLinkSection sites={sites} siteList={siteList} changeSite={changeSite} removeSite={removeSite} addSite={addSite} />
+                <ArtistBasicInfoSection formData={formData} handleChange={handleChange} activityTypeList={activityTypeList} num={1}/>
+                <ArtistProfileImageSection writrImageNo={writrImageNo} writrImageFile={writrImageFile} handleWritrFileNo={handleWritrFileNo} writrFileNo={writrFileNo} num={2}/>
+                <ArtistReprsntSection reprsntPrdctFileNo={reprsntPrdctFileNo} reprsntPrdctImageNo={reprsntPrdctImageNo} reprsntPrdctImageFile={reprsntPrdctImageFile} handleReprsntPrdctFileNo={handleReprsntPrdctFileNo} formData={formData} handleChange={handleChange} num={3}/>
+                <ArtistCareerSection careers={careers} careerSeList={careerSeList} removeCareer={removeCareer} changeCareer={changeCareer} addCareer={addCareer} num={4}/>
+                <ArtistLinkSection sites={sites} siteList={siteList} changeSite={changeSite} removeSite={removeSite} addSite={addSite} num={5}/>
 
                 {/* <section className="form-section">
                     <SectionTitle icon="bi-person" number="1." title="기본 정보"/>

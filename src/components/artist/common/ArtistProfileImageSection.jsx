@@ -2,10 +2,10 @@ import { Col, Row } from "react-bootstrap";
 import SectionTitle from "../../common/SectionTitle";
 import ImageUploadBox from "../../common/ImageUploadBox";
 
-export default function ArtistProfileImageSection({writrImageNo, writrImageFile, handleWritrFileNo, writrFileNo}) {
+export default function ArtistProfileImageSection({writrImageNo, writrImageFile, handleWritrFileNo, writrFileNo, num}) {
     return (
             <section className="form-section">
-                <SectionTitle icon="bi-camera" number="2." title="프로필 사진 업로드"/>
+                <SectionTitle icon="bi-camera" number={`${num}. `} title="프로필 사진 업로드"/>
                 <Row className="g-4">
                     <Col md={4}>
                         <ImageUploadBox

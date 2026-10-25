@@ -42,7 +42,7 @@ export default function LoginForm({onLoginSuccess}) {
 
                 await onLoginSuccess();
 
-                navigate("/");
+                navigate("/", { replace: true });
             }
             
         } catch (error) {

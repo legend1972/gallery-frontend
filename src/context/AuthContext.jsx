@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useCallback, useContext, useEffect, useState } from "react";
 import api from "../api/api";
 const AuthContext = createContext(null);
 
@@ -7,6 +7,7 @@ export function AuthProvider({children}) {
     const [loading, setLoading] = useState(true);
 
     const [authenticated, setAuthenticated] = useState(false);
+    const [authRoutes, setAuthRoutes] = useState([]);
 
     /**
      * 현재 로그인 사용자 조회
@@ -15,21 +16,27 @@ export function AuthProvider({children}) {
         try {
             const response = await api.get("/member/me");
 
+            const data = response.data?.data;
             setUser(response.data?.data ?? null);
-            setAuthenticated(true);
-
-            return true;
+            
+            if(!data) {
+                setAuthenticated(false);
+            } else {
+                setAuthenticated(true);
+            }
         } catch (error) {
-            setUser(null);
-            setAuthenticated(false);
-
-            return false;
+            if(error.response?.status === 401) {
+                
+                setUser(null);
+                setAuthenticated(false);
+                return;
+            }
         } finally {
             setLoading(false);
         }
     };
 
-    useEffect(() => {
+    useCallback(() => {
         fetchUser();
     }, []);
 
@@ -45,6 +52,7 @@ export function AuthProvider({children}) {
         } finally {
                 setUser(null);
                 setAuthenticated(false);
+                setAuthRoutes([]);
             }
         };
 
@@ -56,7 +64,8 @@ export function AuthProvider({children}) {
                 loading,
                 fetchUser,
                 logout,
-                authenticated
+                authenticated,
+                authRoutes,
             }}>
                 {children}
         </AuthContext.Provider>

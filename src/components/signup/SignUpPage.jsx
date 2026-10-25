@@ -1,18 +1,23 @@
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container, Row, Col, Card, Image } from "react-bootstrap";
 import SignUpForm from "./SignUpForm";
-import Header from "./Header";
+import signupImage from "../../assets/signup-gallery.png";
+import "./SignUpPage.css";
 
 export default function SignUpPage() {
     return (
     <div>
-        <Header/>
         <Container>
             <Row>
                 <Col lg={4}>
-                    <span>기본 개발 후 작성 예정임</span>
+                    <Image
+                        src={signupImage}
+                        alt="아트리움 갤러리"
+                        fluid
+                        className="signup-gallery-image"
+                    />
                 </Col>
                 <Col lg={8}>
-                    <Card>
+                    <Card className="signup-card">
                         <Card.Body>
                             <SignUpForm/>
                         </Card.Body>

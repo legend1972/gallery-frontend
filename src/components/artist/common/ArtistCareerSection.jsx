@@ -2,11 +2,11 @@ import DatePicker from "react-datepicker";
 import SectionTitle from "../../common/SectionTitle";
 import { Button, Form } from "react-bootstrap";
 
-export default function ArtistCareerSection({careers, careerSeList, removeCareer, changeCareer, addCareer}) {
+export default function ArtistCareerSection({careers, careerSeList, removeCareer, changeCareer, addCareer, num}) {
     return (
             <section className="form-section">
                 <div className="section-header">
-                    <SectionTitle icon="bi-briefcase" number="4." title="주요 경력"/>
+                    <SectionTitle icon="bi-briefcase" number={`${num}. `} title="주요 경력"/>
                     <Button type="button" variant="outline-primary" size="sm" className="add-button" onClick={addCareer}><i className="bi bi-plus-lg me-2"/>경력 추가</Button>
                 </div>
                 <div className="career-table-wrapper">

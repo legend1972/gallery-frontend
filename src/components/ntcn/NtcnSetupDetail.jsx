@@ -1,23 +1,13 @@
 import { Button, Card, Col, Form, Modal, Row } from "react-bootstrap";
-import { BsBell, BsBuilding, BsChatDots, BsChevronLeft, BsClipboardCheck, BsClock, BsEnvelope, BsHeart, BsImage, BsMegaphone, BsPersonCheck, BsPersonPlus } from "react-icons/bs";
+import * as Bs from "react-icons/bs";
 import "./NtcnSetupDetail.css";
 import { useEffect, useState } from "react";
 import { useAuth } from "../../context/AuthContext";
 import api from "../../api/api";
 import {formatTimeChange, formatTimeReChange} from "../../utils/dateUtils";
+import Icon from "../common/Icon";
 
-const iconMap = {
-    BsHeart,
-    BsChatDots,
-    BsClipboardCheck,
-    BsPersonCheck,
-    BsImage,
-    BsMegaphone,
-    BsBuilding,
-    BsPersonPlus,
-};
-
-export default function NtcnSetupDetail({show, onHide}) {
+export default function NtcnSetupDetail({show, onHide, onBack}) {
     const [mberNtcnSetup, setMberNtcnSetup] = useState({
         mberNo: "",
         allRecptnAt: true,
@@ -215,16 +205,8 @@ export default function NtcnSetupDetail({show, onHide}) {
         return value;
     };
 
-    const getNtcnIemSetupIcon = (iconCode) => {
-        const Component = iconMap[iconCode] ?? BsHeart;
-
-        return (
-            <Component/>
-        );
-    };
-
-    const getIconClass = (iconCode) => {
-        switch (iconCode) {
+    const getIconClass = (iconNm) => {
+        switch (iconNm) {
             case "BsHeart":
                 return "ntcn-setting-icon icon-red";
             case "BsChatDots":
@@ -239,7 +221,7 @@ export default function NtcnSetupDetail({show, onHide}) {
                 return "ntcn-setting-icon icon-yellow";
             case "BsBuilding":
                 return "ntcn-setting-icon icon-violet";
-            case "PERSBsPersonPlusON_PLUS":
+            case "BsPersonPlus":
                 return "ntcn-setting-icon icon-mint";
             default:
                 return "ntcn-setting-icon icon-gray";
@@ -247,11 +229,11 @@ export default function NtcnSetupDetail({show, onHide}) {
     };
 
     return (
-        <Modal show={show} onHide={onHide} fullscreen centered size="lg" dialogClassName="ntcn-setting-modal" contentClassName="ntcn-setting-modal-content"  scrollable>
+        <Modal show={show} onHide={onHide} fullscreen dialogClassName="ntcn-setting-modal" contentClassName="ntcn-setting-modal-content" scrollable>
             <Modal.Header className="ntcn-setting-header">
                 <div className="ntcn-setting-container">
-                    <Button variant="link" onClick={onHide} aria-label="뒤로가기" className="ntcn-setting-back">
-                        <BsChevronLeft/>
+                    <Button variant="link" onClick={onBack} aria-label="뒤로가기" className="ntcn-setting-back">
+                        <Bs.BsChevronLeft/>
                     </Button>
                     <Modal.Title className="ntcn-setting-title">알림 설정</Modal.Title>
                     {/* <div className="ntcn-setting-description">
@@ -281,7 +263,7 @@ export default function NtcnSetupDetail({show, onHide}) {
                         <Row className="ntcn-setting-method-area">
                             <Col>
                                 <div className="ntcn-setting-method">
-                                    <BsBell className="ntcn-setting-method-icon"/>
+                                    <Bs.BsBell className="ntcn-setting-method-icon"/>
                                     <strong>앱 알림 (인앱)</strong>
                                     <Form.Check
                                         type="switch"
@@ -293,7 +275,7 @@ export default function NtcnSetupDetail({show, onHide}) {
                             </Col>
                             <Col>
                                 <div className="ntcn-setting-method method-border">
-                                    <BsEnvelope className="ntcn-setting-method-icon"/>
+                                    <Bs.BsEnvelope className="ntcn-setting-method-icon"/>
                                     <strong>이메일</strong>
                                     <Form.Check
                                         type="switch"
@@ -305,7 +287,7 @@ export default function NtcnSetupDetail({show, onHide}) {
                             </Col>
                             <Col>
                                 <div className="ntcn-setting-method method-border">
-                                    <BsChatDots className="ntcn-setting-method-icon"/>
+                                    <Bs.BsChatDots className="ntcn-setting-method-icon"/>
                                     <strong>문자 (SMS)</strong>
                                     <Form.Check
                                         type="switch"
@@ -338,10 +320,10 @@ export default function NtcnSetupDetail({show, onHide}) {
                         </div>
                         {mberNtcnIemSetupList.map(
                             (mberNtcnIemSetup) => (
-                                <div key={mberNtcnIemSetup.iconCode} className="ntcn-setting-row">
+                                <div key={mberNtcnIemSetup.ntcnSetupCode} className="ntcn-setting-row">
                                     <div className="ntcn-setting-info-col">
-                                        <div className={getIconClass(mberNtcnIemSetup.iconCode)}>
-                                            {getNtcnIemSetupIcon(mberNtcnIemSetup.iconCode)}
+                                        <div className={getIconClass(mberNtcnIemSetup.iconNm)}>
+                                            {<Icon iconNm={mberNtcnIemSetup.iconNm}/>}
                                         </div>
                                         <div className="ntcn-setting-text">
                                             <strong>
@@ -404,7 +386,7 @@ export default function NtcnSetupDetail({show, onHide}) {
                                 <div className="ntcn-setting-time-area">
                                     <label>시작 시간</label>
                                     <div className="ntcn-setting-time-input">
-                                        <BsClock/>
+                                        <Bs.BsClock/>
                                         <Form.Control
                                             type="time"
                                             value={formatTimeChange(mberNtcnSetup.ntcnBeginTime)}
@@ -421,7 +403,7 @@ export default function NtcnSetupDetail({show, onHide}) {
                                 <div className="ntcn-setting-time-area">
                                     <label>종료 시간</label>
                                     <div className="ntcn-setting-time-input">
-                                        <BsClock/>
+                                        <Bs.BsClock/>
                                         <Form.Control
                                             type="time"
                                             value={formatTimeChange(mberNtcnSetup.ntcnEndTime)}

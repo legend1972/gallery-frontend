@@ -1,45 +1,14 @@
 import { Button, Modal, Spinner } from "react-bootstrap";
-import { BsChevronLeft,
-    BsChevronRight,
-    BsBellFill,
-    BsHeartFill,
-    BsChatDotsFill,
-    BsCheckCircleFill,
-    BsHandThumbsUpFill,
-    BsMegaphoneFill,
-    BsPersonPlusFill,
-    BsPersonCheck,
-    BsClipboardCheck,
-    BsImage,
-    BsBuilding,
-    BsEnvelope,
-    BsPeopleFill, 
-    BsGear} from "react-icons/bs";
+import * as Bs from "react-icons/bs";
 import "./NtcnDetail.css";
 import { useEffect, useRef, useState } from "react";
 import api from "../../api/api";
 import { formatTime } from "../../utils/dateUtils";
 import { useNavigate } from "react-router-dom";
 import NtcnSetupDetail from "./NtcnSetupDetail";
+import Icon from "../common/Icon";
 
-const iconMap = {
-    BsBell: BsBellFill,
-    BsHeart: BsHeartFill,
-    BsChatDots: BsChatDotsFill,
-    BsCheckCircle: BsCheckCircleFill,
-    BsHandThumbsUp: BsHandThumbsUpFill,
-    BsMegaphone: BsMegaphoneFill,
-    BsPersonPlus: BsPersonPlusFill,
-    BsPersonCheck: BsPersonCheck,
-    BsClipboardCheck: BsClipboardCheck,
-    BsImage: BsImage,
-    BsBuilding: BsBuilding,
-    BsEnvelope: BsEnvelope,
-    BsPeople: BsPeopleFill
-};
-
-
-export default function NtcnDetail({show, onHide}) {
+export default function NtcnDetail({show, onHide, onOpenSetup}) {
     /********************************************************
      * 변수 선언
      ********************************************************/
@@ -156,7 +125,7 @@ export default function NtcnDetail({show, onHide}) {
         };
 
         retrieveNtcnCtgry();
-    }, []);
+    }, [onOpenSetup]);
 
     /**
      * 회원알림 목록 조회 및 알림카테고리별 전체 건수 조회
@@ -242,7 +211,7 @@ export default function NtcnDetail({show, onHide}) {
         setMberNtcnList([]);
 
         retrieveNtcnDetail(1, true, ntcnCtgrySel);
-    }, [ntcnCtgrySel]);
+    }, [ntcnCtgrySel, onOpenSetup]);
 
     /********************************************************
      * 초기화 및 API 호출
@@ -291,17 +260,6 @@ export default function NtcnDetail({show, onHide}) {
     };
 
     /**
-     * 아이콘 조회
-     */
-    const getNotificationIcon = (iconCode) => {
-        const IconComponent = iconMap[iconCode] ?? BsBellFill;
-
-        return (
-            <IconComponent/>
-        );
-    };
-
-    /**
      * 현재는 작가심사상세 화면만 호출하게 되어 있음
      * 화면이 추가될때 마다 수정해야 함. SJH
      */
@@ -343,16 +301,16 @@ export default function NtcnDetail({show, onHide}) {
 
     return (
         <>
-            <Modal show={show} onHide={handleCloseNtcnDetail} fullscreen centered size="lg" dialogClassName="notification-modal" contentClassName="notification-modal-content" scrollable>
+            <Modal show={show} onHide={handleCloseNtcnDetail} fullscreen dialogClassName="notification-modal" contentClassName="notification-modal-content" scrollable>
                 <Modal.Header className="notification-header">
                     <div className="notification-header-left">
                         <Button variant="link" onClick={handleCloseNtcnDetail} aria-label="뒤로가기" className="notification-back">
-                            <BsChevronLeft />
+                            <Bs.BsChevronLeft />
                         </Button>
                         <Modal.Title className="notification-title">알림</Modal.Title>
                     </div>
-                    <Button variant="link" onClick={handleNtcnSetting} className="notification-setting-button">
-                        <BsGear/>
+                    <Button variant="light" onClick={onOpenSetup} className="notification-setting-button">
+                        <Bs.BsGear/>
                         <span>알림설정</span>
                     </Button>
                 </Modal.Header>
@@ -388,7 +346,7 @@ export default function NtcnDetail({show, onHide}) {
                                                 </div>
                                                 <div className={`notification-icon ${getIconClass(mberNtcn.ntcnCtgryCode)}`}>
                                                     {
-                                                        getNotificationIcon(mberNtcn.iconCode, now)
+                                                        <Icon iconNm={mberNtcn.iconNm}/>
                                                     }
                                                 </div>
                                                 <div className="notification-info">
@@ -410,7 +368,7 @@ export default function NtcnDetail({show, onHide}) {
                                                 {(mberNtcn.menuUrl &&
                                                     (
                                                         <div className="notification-arrow">
-                                                            <BsChevronRight/>
+                                                            <Bs.BsChevronRight/>
                                                         </div>
                                                     )
                                                 )}
@@ -433,7 +391,7 @@ export default function NtcnDetail({show, onHide}) {
                                         )}
                                     </div>
                                 </>
-                            ) : (<div className="notification-empty"><BsBellFill/><span>조회된 대상이 없습니다.</span></div>)}
+                            ) : (<div className="notification-empty"><Bs.BsBellFill/><span>조회된 대상이 없습니다.</span></div>)}
                         </div>
                     )}
                     </div>

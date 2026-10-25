@@ -1,0 +1,818 @@
+.profile-complete-page {
+
+    width: 100%;
+
+    max-width: 860px;
+
+    min-height: 100vh;
+
+    margin: 0 auto;
+
+    padding:
+        25px
+        45px
+        60px;
+
+    background: #ffffff;
+
+    color: #111;
+}
+
+
+/* ==============================
+   Header
+============================== */
+
+.complete-header {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 60px;
+}
+
+
+.complete-header h1 {
+
+    margin: 0;
+
+    font-size: 29px;
+
+    font-weight: 700;
+}
+
+
+.complete-back-button {
+
+    position: absolute;
+
+    left: 0;
+
+    padding: 0;
+
+    border: 0;
+
+    background: transparent;
+
+    color: #111;
+
+    font-size: 38px;
+
+    cursor: pointer;
+}
+
+
+/* ==============================
+   STEP
+============================== */
+
+.complete-stepper {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    max-width: 720px;
+
+    margin:
+        35px
+        auto
+        70px;
+}
+
+
+.complete-step-group {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    flex: 1;
+}
+
+
+.complete-step {
+
+    flex-shrink: 0;
+
+    width: 90px;
+
+    text-align: center;
+}
+
+
+.complete-step-circle {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 50px;
+
+    height: 50px;
+
+    margin:
+        0
+        auto
+        13px;
+
+    border:
+        1px
+        solid
+        #cfd1da;
+
+    border-radius: 50%;
+
+    background: #fff;
+
+    color: #111;
+
+    font-size: 21px;
+
+    font-weight: 600;
+}
+
+
+.complete-step-name {
+
+    font-size: 17px;
+
+    white-space: nowrap;
+}
+
+
+.complete-step.active
+.complete-step-circle {
+
+    border-color: #522092;
+
+    background: #522092;
+
+    color: #fff;
+}
+
+
+.complete-step.active
+.complete-step-name {
+
+    color: #522092;
+
+    font-weight: 700;
+}
+
+
+.complete-step-line {
+
+    flex: 1;
+
+    margin-top: 25px;
+
+    border-top:
+        2px
+        dotted
+        #a8aebb;
+}
+
+
+/* ==============================
+   완료 Result
+============================== */
+
+.complete-result {
+
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+
+.complete-check-area {
+
+    position: relative;
+
+    width: 340px;
+
+    height: 250px;
+
+    margin:
+        0
+        auto;
+}
+
+
+.complete-check-circle {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 50%;
+
+    transform:
+        translate(
+            -50%,
+            -50%
+        );
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 180px;
+
+    height: 180px;
+
+    border-radius: 50%;
+
+    background:
+        #f0eaf5;
+
+    color: #5c2c91;
+
+    font-size: 90px;
+}
+
+
+.complete-result h2 {
+
+    margin:
+        0
+        0
+        25px;
+
+    font-size: 42px;
+
+    font-weight: 800;
+
+    line-height: 1.35;
+}
+
+
+.complete-result p {
+
+    margin: 0;
+
+    color: #4a4a4a;
+
+    font-size: 21px;
+}
+
+
+/* ==============================
+   Confetti
+============================== */
+
+.confetti {
+
+    position: absolute;
+
+    display: block;
+
+    width: 15px;
+
+    height: 15px;
+}
+
+
+.c1 {
+
+    left: 45px;
+
+    top: 60px;
+
+    background: #8185ff;
+
+    transform:
+        rotate(55deg);
+}
+
+
+.c2 {
+
+    left: 165px;
+
+    top: 30px;
+
+    width: 12px;
+
+    height: 12px;
+
+    background: #ef81ec;
+
+    transform:
+        rotate(45deg);
+}
+
+
+.c3 {
+
+    right: 50px;
+
+    top: 45px;
+
+    background: #82df9b;
+
+    transform:
+        rotate(35deg);
+}
+
+
+.c4 {
+
+    right: 12px;
+
+    top: 115px;
+
+    width: 13px;
+
+    height: 13px;
+
+    background: #79c7ee;
+
+    transform:
+        rotate(35deg);
+}
+
+
+.c5 {
+
+    left: 95px;
+
+    bottom: 25px;
+
+    width: 14px;
+
+    height: 14px;
+
+    background: #ffd34e;
+
+    transform:
+        rotate(45deg);
+}
+
+
+.c6 {
+
+    right: 70px;
+
+    bottom: 25px;
+
+    width: 11px;
+
+    height: 11px;
+
+    background: #ffd34e;
+
+    transform:
+        rotate(45deg);
+}
+
+
+/* ==============================
+   Profile Card
+============================== */
+
+.complete-profile-card {
+
+    padding:
+        42px
+        28px
+        28px;
+
+    border:
+        1px
+        solid
+        #dedfe5;
+
+    border-radius: 14px;
+
+    background: #fff;
+}
+
+
+/* ==============================
+   Profile Info
+============================== */
+
+.complete-profile-info {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 38px;
+
+    padding:
+        0
+        20px;
+}
+
+
+.complete-profile-image {
+
+    flex-shrink: 0;
+
+    width: 220px;
+
+    height: 220px;
+
+    overflow: hidden;
+
+    border-radius: 50%;
+
+    background: #eee;
+}
+
+
+.complete-profile-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+.complete-profile-text h3 {
+
+    margin:
+        0
+        0
+        5px;
+
+    font-size: 40px;
+
+    font-weight: 800;
+}
+
+
+.complete-activity-name {
+
+    margin-bottom: 28px;
+
+    color: #3e3e3e;
+
+    font-size: 21px;
+}
+
+
+.complete-meta {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+
+.complete-meta div {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    font-size: 17px;
+}
+
+
+.complete-meta svg {
+
+    flex-shrink: 0;
+
+    font-size: 22px;
+}
+
+
+/* ==============================
+   대표 작품
+============================== */
+
+.complete-artwork-list {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            1fr
+        );
+
+    gap: 18px;
+
+    margin-top: 50px;
+}
+
+
+.complete-artwork-item {
+
+    aspect-ratio: 1 / 1.25;
+
+    overflow: hidden;
+
+    border-radius: 12px;
+
+    background: #eee;
+}
+
+
+.complete-artwork-item img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* ==============================
+   Preview
+============================== */
+
+.profile-preview-button {
+
+    width: 100%;
+
+    height: 75px;
+
+    margin-top: 35px;
+
+    border:
+        2px
+        solid
+        #572295 !important;
+
+    border-radius: 12px;
+
+    background: #fff !important;
+
+    color: #572295 !important;
+
+    font-size: 22px;
+
+    font-weight: 700;
+}
+
+
+.profile-preview-button:hover {
+
+    background:
+        #faf8ff !important;
+}
+
+
+/* ==============================
+   Home
+============================== */
+
+.home-button {
+
+    display: block;
+
+    margin:
+        55px
+        auto
+        0;
+
+    border: 0;
+
+    background: transparent;
+
+    color: #572295;
+
+    font-size: 25px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+.home-button:hover {
+
+    text-decoration: underline;
+}
+
+
+/* ==============================
+   Mobile
+============================== */
+
+@media (
+    max-width: 768px
+) {
+
+    .profile-complete-page {
+
+        padding:
+            18px
+            20px
+            45px;
+    }
+
+
+    .complete-header h1 {
+
+        font-size: 23px;
+    }
+
+
+    .complete-back-button {
+
+        font-size: 30px;
+    }
+
+
+    .complete-stepper {
+
+        margin:
+            25px
+            auto
+            50px;
+    }
+
+
+    .complete-step {
+
+        width: 65px;
+    }
+
+
+    .complete-step-circle {
+
+        width: 42px;
+
+        height: 42px;
+
+        font-size: 18px;
+    }
+
+
+    .complete-step-name {
+
+        font-size: 13px;
+    }
+
+
+    .complete-step-line {
+
+        margin-top: 21px;
+    }
+
+
+    .complete-check-area {
+
+        width: 280px;
+
+        height: 210px;
+    }
+
+
+    .complete-check-circle {
+
+        width: 150px;
+
+        height: 150px;
+
+        font-size: 70px;
+    }
+
+
+    .complete-result h2 {
+
+        font-size: 34px;
+    }
+
+
+    .complete-result p {
+
+        font-size: 17px;
+    }
+
+
+    .complete-profile-card {
+
+        padding:
+            30px
+            20px
+            25px;
+    }
+
+
+    .complete-profile-info {
+
+        gap: 25px;
+
+        padding: 0;
+    }
+
+
+    .complete-profile-image {
+
+        width: 150px;
+
+        height: 150px;
+    }
+
+
+    .complete-profile-text h3 {
+
+        font-size: 31px;
+    }
+
+
+    .complete-activity-name {
+
+        margin-bottom: 20px;
+
+        font-size: 18px;
+    }
+
+
+    .complete-meta div {
+
+        gap: 8px;
+
+        font-size: 14px;
+    }
+
+
+    .complete-artwork-list {
+
+        gap: 10px;
+
+        margin-top: 35px;
+    }
+
+
+    .profile-preview-button {
+
+        height: 60px;
+
+        margin-top: 25px;
+
+        font-size: 18px;
+    }
+
+
+    .home-button {
+
+        margin-top: 38px;
+
+        font-size: 21px;
+    }
+}
+
+
+/* ==============================
+   Small Mobile
+============================== */
+
+@media (
+    max-width: 480px
+) {
+
+    .complete-profile-info {
+
+        align-items: flex-start;
+    }
+
+
+    .complete-profile-image {
+
+        width: 120px;
+
+        height: 120px;
+    }
+
+
+    .complete-profile-text h3 {
+
+        font-size: 27px;
+    }
+
+
+    .complete-activity-name {
+
+        font-size: 16px;
+    }
+
+
+    .complete-meta div {
+
+        font-size: 12px;
+    }
+}

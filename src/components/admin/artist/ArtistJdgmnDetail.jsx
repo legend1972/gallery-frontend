@@ -199,7 +199,7 @@ export default function ArtistJdgmnDetail({mberNo, email, show, onHide, onSaved}
     }
 
     return (
-        <Modal show={show} onHide={onHide} fullscreen centered size="lg" dialogClassName="artist-review-modal">
+        <Modal show={show} onHide={onHide} fullscreen dialogClassName="artist-review-modal" contentClassName="artist-review-modal-content">
             <Modal.Header className="review-modal-header">
                 <Button variant="link" onClick={onHide} aria-label="뒤로가기" className="notification-back-button">
                     <BsChevronLeft />
@@ -210,7 +210,7 @@ export default function ArtistJdgmnDetail({mberNo, email, show, onHide, onSaved}
                 <section className="artist-summary-section">
                     <Row className="align-items-center g-4">
                         <div className="d-flex align-items-center">
-                            <Col xs={12} md={7}>
+                            <Col>
                                 <div className="d-flex align-items-center">
                                     <Image src={writrFileDtls.fileUrl} roundedCircle className="artist-profile-image"/>
                                     <div className="ms-4">
@@ -219,7 +219,7 @@ export default function ArtistJdgmnDetail({mberNo, email, show, onHide, onSaved}
                                     </div>
                                 </div>
                             </Col>
-                            <Col  xs={12} md={5}>
+                            <Col>
                                 <div className="representative-work-title">대표작</div>
                                 <div className="d-flex align-items-center gap-3">
                                     <Image src={reprsntPrdctFileDtls.fileUrl} className="representative-work-image"/>

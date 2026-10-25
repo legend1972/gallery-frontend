@@ -1,0 +1,752 @@
+
+/* ======================================
+   작품 활동 등록 모달
+====================================== */
+
+.artist-activity-modal {
+    --activity-primary: #35108c;
+    --activity-purple: #5e28d9;
+    --activity-border: #dce5f0;
+    --activity-text: #171717;
+    --activity-hint: #657ba9;
+}
+
+.artist-activity-modal .modal-dialog {
+    margin: 0;
+    max-width: 100%;
+}
+
+.artist-activity-modal .modal-content {
+    border: none;
+    border-radius: 0;
+    background: #ffffff;
+    color: var(--activity-text);
+    height: 100%;
+}
+
+.artist-activity-modal .modal-header {
+    border-bottom: none;
+}
+
+.artist-activity-modal .modal-body {
+    overflow-y: auto;
+}
+
+/* ======================================
+   상단 헤더
+====================================== */
+
+.artist-activity-modal .activity-modal-header {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    min-height: 88px;
+    padding: 14px 25px 10px;
+}
+
+.activity-header-title {
+    flex: 1;
+    text-align: center;
+    padding: 0 42px;
+}
+
+.activity-header-title .modal-title {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 1.5;
+    letter-spacing: -0.5px;
+}
+
+.activity-header-title p {
+    margin: 3px 0 0;
+    color: #516c9c;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.artist-activity-modal .activity-back-btn,
+.artist-activity-modal .activity-close-btn {
+    position: absolute;
+    top: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    width: 34px;
+    height: 34px;
+    color: #111111;
+    border: none;
+    box-shadow: none;
+    font-size: 28px;
+    text-decoration: none;
+}
+
+.activity-back-btn {
+    left: 22px;
+}
+
+.activity-close-btn {
+    right: 22px;
+}
+
+.artist-activity-modal .activity-back-btn:hover,
+.artist-activity-modal .activity-close-btn:hover {
+    color: var(--activity-purple);
+}
+
+/* ======================================
+   전체 콘텐츠
+====================================== */
+
+.activity-modal-body {
+    padding: 0 15px 20px !important;
+}
+
+.activity-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* ======================================
+   공통 Section
+====================================== */
+
+.activity-container > section {
+    padding: 15px 18px 17px;
+    margin-bottom: 7px;
+    border: 1px solid #dfe7f2;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+/* SectionTitle 공통 스타일 */
+
+.activity-container > section > :first-child {
+    margin-bottom: 12px;
+}
+
+/* bootstrap icon 및 순번 디자인 */
+
+.activity-container section h2,
+.activity-container section h3,
+.activity-container section h4 {
+    font-size: 15px;
+    font-weight: 800;
+    color: #111111;
+}
+
+/* ======================================
+   기본 정보 입력폼
+====================================== */
+
+/* 각 항목 간 간격 */
+
+.activity-container section > .row > .col-12 {
+    margin-bottom: 12px;
+}
+
+.activity-container section > .row > .col-12:last-child {
+    margin-bottom: 0;
+}
+
+/* Label */
+
+.activity-container .form-label {
+    display: inline-block;
+    padding-top: 7px;
+    margin-bottom: 5px;
+    color: #1c1c1c;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.activity-container .form-label em {
+    color: #f01c24;
+    font-style: normal;
+}
+
+/* Form Control / Select */
+
+.activity-container .form-control,
+.activity-container .form-select {
+    width: 100%;
+    min-height: 35px;
+    border: 1px solid var(--activity-border);
+    border-radius: 5px;
+    background-color: #ffffff;
+    padding: 6px 13px;
+    font-size: 13px;
+    color: #222222;
+    box-shadow: none;
+}
+
+.activity-container .form-control::placeholder {
+    color: #a0a9b9;
+}
+
+.activity-container .form-control:focus,
+.activity-container .form-select:focus {
+    border-color: #8155d9;
+    box-shadow: 0 0 0 2px rgba(105, 56, 210, 0.1);
+}
+
+.activity-container .form-select {
+    padding-right: 30px;
+    cursor: pointer;
+}
+
+/* 입력 도움말 */
+
+.activity-container .form-hint {
+    margin: 6px 0 0;
+    color: var(--activity-hint);
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+/* ======================================
+   날짜 입력 영역
+====================================== */
+
+.activity-date-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+}
+
+.activity-date-row .form-control {
+    flex: 0 1 190px;
+    min-width: 0;
+    max-width: 190px;
+}
+
+.activity-date-row .date-separator {
+    flex-shrink: 0;
+    color: #111111;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.activity-date-row .form-check {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 0 24px;
+    white-space: nowrap;
+}
+
+.activity-date-row .form-check-input {
+    float: none;
+    margin: 0;
+    width: 17px;
+    height: 17px;
+}
+
+.activity-date-row .form-check-label {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.activity-container input[type="date"] {
+    cursor: pointer;
+    font-size: 13px;
+}
+
+/* ======================================
+   이미지 업로드 영역
+====================================== */
+
+/*
+   ImageUploadBox는 별도의 공통 컴포넌트입니다.
+   내부에 사용하는 클래스가 다를 수 있으므로
+   이미지 스타일은 실제 내부 마크업에 맞춰
+   추가 조정할 수 있습니다.
+*/
+
+.activity-container img {
+    max-width: 100%;
+}
+
+.activity-container .image-preview,
+.activity-container .image-upload-preview {
+    width: 110px;
+    height: 104px;
+    border: 1px solid var(--activity-border);
+    border-radius: 7px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.activity-container .image-upload-box {
+    display: inline-flex;
+    min-width: 200px;
+    min-height: 100px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4px;
+    border: 1px dashed #c5b5e9;
+    border-radius: 6px;
+    background: #ffffff;
+    color: #4e1dc0;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.activity-container .image-upload-box:hover {
+    background: #faf7ff;
+    border-color: #8555df;
+}
+
+/* ======================================
+   활동 소개 / 소개 입력 영역
+====================================== */
+
+.activity-container .intro-wrap {
+    position: relative;
+    width: 100%;
+}
+
+.activity-container textarea.form-control {
+    min-height: 100px;
+    resize: vertical;
+    padding: 10px 12px 29px;
+    line-height: 1.7;
+    font-size: 13px;
+}
+
+.activity-container .char-count {
+    position: absolute;
+    bottom: 8px;
+    right: 12px;
+    color: #6076a4;
+    font-size: 11px;
+    font-weight: 600;
+    pointer-events: none;
+}
+
+/* ======================================
+   관련 기관 / 주최 영역
+====================================== */
+
+/* 기관명 / 역할 행 */
+
+.activity-container .organization-name-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.organization-name-row .organization-name-input {
+    flex: 1;
+    min-width: 0;
+}
+
+.organization-name-row .organization-role-label {
+    flex: 0 0 auto;
+    white-space: nowrap;
+}
+
+.organization-name-row .organization-role-select {
+    flex: 0 0 130px;
+}
+
+/* 참여 기간 */
+
+.activity-container .organization-date-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* 주소 입력 */
+
+.activity-container .address-input-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.address-input-group .form-control {
+    flex: 1;
+    min-width: 0;
+}
+
+.address-input-group .address-icon-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 35px;
+    background: #ffffff;
+    border: 1px solid var(--activity-border);
+    border-radius: 5px;
+    color: #5723c5;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.address-icon-btn:hover {
+    background: #f7f2ff;
+}
+
+/* 관련 기관 추가 버튼 */
+
+.activity-container .add-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    min-height: 36px;
+    padding: 7px 12px;
+    color: #4f1ac4;
+    background: #ffffff;
+    border: 1px solid #8254dd;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.activity-container .add-button:hover {
+    background: #f7f2ff;
+    color: #4515ae;
+    border-color: #6330d0;
+}
+
+/* ======================================
+   등록된 관련 기관 / 주최 목록
+====================================== */
+
+.activity-organization-list {
+    width: 100%;
+}
+
+.activity-organization-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 12px 0;
+    border-bottom: 1px solid #e9edf4;
+}
+
+.activity-organization-item:last-child {
+    border-bottom: none;
+}
+
+.activity-organization-image {
+    width: 75px;
+    height: 75px;
+    flex-shrink: 0;
+    border: 1px solid var(--activity-border);
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.activity-organization-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.activity-organization-name {
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.activity-organization-role {
+    display: inline-block;
+    margin-left: 12px;
+    padding: 2px 10px;
+    border: 1px solid #ac87e8;
+    border-radius: 12px;
+    color: #632bc5;
+    background: #faf7ff;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.activity-organization-description {
+    margin: 7px 0 5px;
+    font-size: 12px;
+    line-height: 1.6;
+    white-space: pre-wrap;
+}
+
+.activity-organization-period {
+    margin: 0;
+    color: #637ba7;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.activity-organization-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.activity-organization-actions .btn {
+    min-height: 32px;
+    background: #ffffff;
+    border: 1px solid var(--activity-border);
+    color: #222222;
+    font-size: 12px;
+}
+
+.activity-organization-actions .delete-btn {
+    color: #ef2323;
+}
+
+/* ======================================
+   추가 이미지 유형 선택
+====================================== */
+
+.activity-image-categories {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.activity-container .category {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 95px;
+    min-height: 35px;
+    padding: 7px 14px;
+    margin: 0 7px 7px 0;
+    background: #ffffff;
+    border: 1px solid var(--activity-border);
+    border-radius: 5px;
+    color: #303030;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.activity-container .category:hover {
+    border-color: #a788e3;
+    background: #fbf9ff;
+}
+
+.activity-container .category.active {
+    color: #4a18c0;
+    background: #faf7ff;
+    border: 1px solid #7d4add;
+    font-weight: 800;
+}
+
+/* ======================================
+   공개 설정
+====================================== */
+
+.activity-container .form-check {
+    font-size: 12px;
+}
+
+.activity-container .form-check-input {
+    border-color: #c8d3e5;
+    cursor: pointer;
+}
+
+.activity-container .form-check-input:checked {
+    background-color: #5924d5;
+    border-color: #5924d5;
+}
+
+.activity-container .form-check-input:focus {
+    box-shadow: 0 0 0 2px rgba(89, 36, 213, 0.12);
+}
+
+.activity-container .radio-hint {
+    margin-top: 1px;
+    margin-bottom: 8px;
+    margin-left: 24px;
+}
+
+/* ======================================
+   하단 취소 / 등록 버튼
+====================================== */
+
+.activity-bottom-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+    padding: 0 20px 8px;
+}
+
+.activity-bottom-buttons .btn {
+    width: 210px;
+    min-height: 36px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.activity-bottom-buttons .btn-outline-primary {
+    color: #4f1cc2;
+    background: #ffffff;
+    border-color: #8254df;
+}
+
+.activity-bottom-buttons .btn-outline-primary:hover {
+    background: #f7f2ff;
+}
+
+.activity-bottom-buttons .btn-primary {
+    color: #ffffff;
+    background: #35108c;
+    border-color: #35108c;
+}
+
+.activity-bottom-buttons .btn-primary:hover {
+    background: #4d1db8;
+    border-color: #4d1db8;
+}
+
+/* ======================================
+   Tablet
+====================================== */
+
+@media (max-width: 991px) {
+    .activity-container {
+        max-width: 100%;
+    }
+
+    .activity-container > section {
+        padding: 14px;
+    }
+
+    .activity-date-row {
+        gap: 8px;
+    }
+
+    .activity-date-row .form-control {
+        flex-basis: 160px;
+        max-width: 160px;
+    }
+
+    .activity-date-row .form-check {
+        margin-left: 5px;
+    }
+
+    .activity-bottom-buttons .btn {
+        width: 170px;
+    }
+}
+
+/* ======================================
+   Mobile
+====================================== */
+
+@media (max-width: 767px) {
+    .artist-activity-modal .activity-modal-header {
+        padding: 14px 8px 10px;
+        min-height: 79px;
+    }
+
+    .activity-header-title {
+        padding: 0 38px;
+    }
+
+    .activity-header-title .modal-title {
+        font-size: 21px;
+    }
+
+    .activity-header-title p {
+        font-size: 11px;
+        line-height: 1.5;
+    }
+
+    .activity-back-btn {
+        left: 8px;
+    }
+
+    .activity-close-btn {
+        right: 8px;
+    }
+
+    .activity-modal-body {
+        padding: 0 8px 15px !important;
+    }
+
+    .activity-container > section {
+        padding: 13px 12px;
+        margin-bottom: 8px;
+    }
+
+    .activity-container section > .row > .col-12 {
+        margin-bottom: 11px;
+    }
+
+    .activity-container .form-label {
+        padding-top: 0;
+        margin-bottom: 6px;
+    }
+
+    .activity-date-row {
+        gap: 8px;
+    }
+
+    .activity-date-row .form-control {
+        flex: 1 1 120px;
+        max-width: none;
+    }
+
+    .activity-date-row .form-check {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 4px;
+    }
+
+    .organization-name-row {
+        flex-wrap: wrap;
+    }
+
+    .organization-name-row .organization-name-input {
+        flex: 1 1 100%;
+    }
+
+    .organization-name-row .organization-role-select {
+        flex: 1;
+    }
+
+    .activity-organization-item {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .activity-organization-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .activity-organization-actions {
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    .activity-container .category {
+        min-width: 83px;
+        padding: 6px 10px;
+        font-size: 11px;
+    }
+
+    .activity-bottom-buttons {
+        gap: 10px;
+        padding: 6px 0;
+    }
+
+    .activity-bottom-buttons .btn {
+        flex: 1;
+        width: auto;
+    }
+}
